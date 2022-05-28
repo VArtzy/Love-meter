@@ -280,12 +280,6 @@ footer {
     }
 }
 
-/*media query to detect orientation change*/
-      @media screen and (orientation: landscape) {
-        footer {
-            display: none;
-        }
-      }
 
 /* Animations */
 @keyframes jump-shaking {

@@ -14,6 +14,7 @@ const arr2 = document.querySelector('.arr2');
 const waktu_load = [1000, 2000, 3000, 4000, 5000];
 const besarans = ['KWH', 'CM', 'Joule', 'N', 'M', 'm/s', 'm/s^2', 'mm', 's', 'J/s']
 const q2q = document.querySelector('.Q2Q');
+const footer = document.querySelector('footer');
 
 function getPersen() {
     return Math.round(Math.random() * 100)
@@ -111,3 +112,8 @@ arr1.addEventListener('click', () => {
 arr2.addEventListener('click', () => {
     a2.classList.toggle('appear');
 })
+
+// resize event listener to detect change in screen height
+window.addEventListener("resize", (e) => {
+    footer.style.display = 'none';
+  });
