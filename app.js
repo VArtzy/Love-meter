@@ -14,6 +14,7 @@ const arr2 = document.querySelector('.arr2');
 const waktu_load = [1000, 2000, 3000, 4000, 5000];
 const besarans = ['KWH', 'CM', 'Joule', 'N', 'M', 'm/s', 'm/s^2', 'mm', 's', 'J/s']
 const q2q = document.querySelector('.Q2Q');
+const meteran = document.querySelector('#meteran');
 const footer = document.querySelector('footer');
 
 function getPersen() {
@@ -85,7 +86,7 @@ function reset() {
 }
 
 button.addEventListener('click', () => {
-    document.getElementById("meteran").scrollIntoView({behavior: 'smooth'})
+    document.querySelector("#meteran").scrollIntoView({behavior: 'smooth'})
     let nama1 = inama1.value
     let nama2 = inama2.value
     if (!nama1 || !nama2) {alert('Tolong mengisikan kedua nama dahulu sebelum melakukan test love meter!'); return;}
@@ -116,5 +117,9 @@ arr2.addEventListener('click', () => {
 
 // resize event listener to detect change in screen height
 window.addEventListener("resize", (e) => {
-    footer.style.display = 'none';
+    if(footer.style.display = 'none') {
+        footer.style.display = 'flex'
+    } else {
+        footer.style.display = 'none'
+    }
   });
