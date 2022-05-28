@@ -85,6 +85,7 @@ function reset() {
 }
 
 button.addEventListener('click', () => {
+    document.getElementById("meteran").scrollIntoView({behavior: 'smooth'})
     let nama1 = inama1.value
     let nama2 = inama2.value
     if (!nama1 || !nama2) {alert('Tolong mengisikan kedua nama dahulu sebelum melakukan test love meter!'); return;}
